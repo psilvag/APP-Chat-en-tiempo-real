@@ -1,0 +1,30 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Proyecto chat en tiempo real con node y socket-io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psilvag/APP-Chat-en-tiempo-real.git"
+  },
+  "keywords": [
+    "socket-io"
+  ],
+  "author": "Pablo Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psilvag/APP-Chat-en-tiempo-real/issues"
+  },
+  "homepage": "https://github.com/psilvag/APP-Chat-en-tiempo-real#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
