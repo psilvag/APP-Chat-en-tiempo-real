@@ -18,11 +18,12 @@
   * Evento que se ejecuta cuando se conecta un nuevo usuario al socket
   */
  io.on('connection',(socket)=>{
-    console.log(`Usuario con IP:${socket.handshake.address} se conecto`);
+    const address=socket.handshake.headers['x-forwarded-for']||socket.handshake.address
+    console.log(`Usuario con IP:${address} se conecto`);
     
  })
 
-
+ 
  app.get('/server',(req,res)=>{
     res.status(200).send('SERVER: OK')
  })
