@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socket-io chat</title>
-    
+    <script type="application/javascript" src="/socket.io/socket.io.js"></script>
+    <script >
+        let socket=io()
+    </script>
   
 </head>
 <body>
-    <h1>Chat Real Time</h1>
+    <h1>Chat Real Time-Socket.io</h1>
     <div id="messages">
-
+        <ul></ul>
+        <form action="">
+            <input type="text" placeholder="Escriba un mensaje">
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 
-
-
-
-    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <script src="/main.js"></script>
+    
 </body>
 </html>

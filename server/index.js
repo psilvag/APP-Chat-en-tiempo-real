@@ -4,28 +4,25 @@
    */ 
  const express= require('express')
  const app=express()
- const server= require('http').Server(app)
- const io=require('socket.io')(server)
+ const server= require('http').createServer(app)
+ const {Server}=require('socket.io')
+ const io=new Server(server)
+
  const PORT=3077
  const path=require('path')
  
  /**
-  * Configuracion del directorio estatico para archivos estaticos, en este ejemplo index.html
-  */
- app.use(express.static(path.join(__dirname, 'client')));
-
- /**
   * Evento que se ejecuta cuando se conecta un nuevo usuario al socket
   */
  io.on('connection',(socket)=>{
-    const address=socket.handshake.headers['x-forwarded-for']||socket.handshake.address
-    console.log(`Usuario con IP:${address} se conecto`);
-    
+   console.log('Nuevo usuario conectado');
  })
-
- 
- app.get('/server',(req,res)=>{
-    res.status(200).send('SERVER: OK')
+ app.use(express.static('client'))
+  /**
+  * le enviamos index.html para renderizarlo
+  */
+ app.get('/',(req,res)=>{
+    res.sendFile(`${path.resolve('client','index.html')}`)
  })
  
  app.listen(PORT,()=>{
