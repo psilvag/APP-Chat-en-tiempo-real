@@ -27,7 +27,7 @@ npm install
 
 3. Levantar el servidor
 ```
-npm run start
+npm start
 ```
 4. El servidor se levanta en 
 http://localhost:5000/

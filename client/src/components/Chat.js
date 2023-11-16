@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import '../styles/chat.styles.css'
 
 
 const chat = ({socket, userName,idChatRoom }) => {

@@ -22,7 +22,7 @@ io.on('connection',(socket)=>{
     socket.on('join_chat_room',(idRoom)=>{
         socket.join(idRoom)
         console.log(`User whit id ${socket.id} join at chatroomID: ${idRoom}`);
-
+       
     })
     
     // Recibimos el mensaje del front

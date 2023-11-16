@@ -1,0 +1,29 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #171C2B;
+    width: 100%;
+    height: 100vh;
+   
+}
+.Home{
+    width:50%;
+    height: auto;
+    border: 3px solid white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.home-init{
+    display: flex;
+    flex-direction: column;
+}
+.home-init h2{
+    text-align: center;
+    font-size: 45px;
+}
+.Home-name-input{
+    display: flex;
+    flex-direction: column;
+}
